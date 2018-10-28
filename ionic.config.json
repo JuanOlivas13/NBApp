@@ -1,0 +1,7 @@
+{
+  "name": "NBApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
