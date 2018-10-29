@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Partidos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-segment [(ngModel)]="section">
+    <ion-segment-button value="following">
+      Siguiendo
+    </ion-segment-button>
+    <ion-segment-button value="all">
+      Todos
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="section">
+    <ion-list *ngSwitchCase="'following'">
+      <ion-item>
+        <ion-avatar item-start>
+            <img src="">
+        </ion-avatar>
+          <h2 text-center>11:30 AM</h2>
+        <ion-avatar item-end>
+          <img src="">
+        </ion-avatar>
+      </ion-item>
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'all'">
+      <ion-item>
+        <ion-avatar item-start>
+            <img src="">
+        </ion-avatar>
+          <h2 text-center>2:45 PM</h2>
+        <ion-avatar item-end>
+          <img src="">
+        </ion-avatar>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

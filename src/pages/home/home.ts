@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  segment: string = "following";
+
   constructor(public navCtrl: NavController) {
 
   }
