@@ -10,7 +10,7 @@ export class HomePage {
   segment: string = "following";
 
   constructor(public navCtrl: NavController) {
-
+    console.log("hola test");
   }
 
 }
