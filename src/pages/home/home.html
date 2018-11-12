@@ -67,7 +67,7 @@
   </ion-list>
 
   <ion-list *ngSwitchCase="'topnews'">
-    <ion-content class="card-background-page">
+    <ion-card-content class="card-background-page">
 
       <ion-card>
         <img src="https://static.techspot.com/images2/news/bigimage/2018/02/2018-02-14-image-4.jpg"/>
@@ -75,19 +75,18 @@
         <div class="card-subtitle">41 Listings</div>
       </ion-card>
     
-    </ion-content>
+    </ion-card-content>
   </ion-list>
 
   <ion-list *ngSwitchCase="'all'">
-    <ion-card>
-      <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fpeopledotcom.files.wordpress.com%2F2016%2F08%2Fsteph-curry-1024.jpg%3Fw%3D1024&w=700&c=sc&poi=face&q=85"/>
+    <ion-card *ngFor="let new of news">
+      <img src={{new.picture}}/>
       <ion-card-content>
         <ion-card-title>
-          Nine Inch Nails Live
+          {{new.title}}
           </ion-card-title>
         <p>
-          The most popular industrial group ever, and largely
-          responsible for bringing the music to a mass audience.
+          {{new.body}}
         </p>
         <ion-row>
           <ion-col>
