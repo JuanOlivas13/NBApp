@@ -1,3 +1,36 @@
 page-stats {
+    // .header .col {
+    //     background-color:lightgrey;
+    // }
+    .style-head{
+        background-color: #4a4a7a;
+        color: white;
+        text-align: center;
+    }
 
+    .text-center{
+        text-align: center;
+    }
+
+    .mt-20{
+        margin-top: 20px;
+    }
+
+    .border-b{
+        border-bottom: solid 1px lightgray;
+    }
+    
+    // .col {
+    //     border: solid 1px grey;
+    //     border-bottom-style: none;
+    //     border-right-style: none;
+    // }
+    
+    // .col:last-child {
+    //     border-right: solid 1px grey;
+    // }
+    
+    // .row:last-child .col {
+    //     border-bottom: solid 1px grey;
+    // }
 }
