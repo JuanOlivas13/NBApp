@@ -14,6 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { GamesPage } from '../pages/games/games';
 import { StatsPage } from '../pages/stats/stats';
 import { SettingsPage } from '../pages/settings/settings';
+import { NewsService } from './services/news.service';
 
 // Initialize Firebase
 var firebaseConfig = {
@@ -54,7 +55,8 @@ var firebaseConfig = {
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NewsService
   ]
 })
 export class AppModule {}
