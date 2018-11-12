@@ -22,6 +22,7 @@
 
 <div [ngSwitch]="segment">
   <ion-list *ngSwitchCase="'following'">
+<<<<<<< HEAD
       <ion-card>
           <ion-thumbnail>
               <img src="gs://cursoionic-dd5ad.appspot.com/madrid.PNG">
@@ -36,26 +37,86 @@
             </p>
           </ion-card-content>
         </ion-card>
+=======
+    <ion-card>
+      <img src="https://static.techspot.com/images2/news/bigimage/2018/02/2018-02-14-image-4.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="star"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="share-alt"></ion-icon>
+          </ion-col>
+        </ion-row>
+        
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <img src="https://static.techspot.com/images2/news/bigimage/2018/02/2018-02-14-image-4.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="star"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="share-alt"></ion-icon>
+          </ion-col>
+        </ion-row>
+        
+      </ion-card-content>
+    </ion-card>
+>>>>>>> ana
   </ion-list>
 
   <ion-list *ngSwitchCase="'topnews'">
-    <ion-item>
-        <ion-thumbnail item-start>
-            <img src="">
-        </ion-thumbnail>
-      <h2>Noticia</h2>
-    </ion-item>
-    ...
+    <ion-content class="card-background-page">
+
+      <ion-card>
+        <img src="https://static.techspot.com/images2/news/bigimage/2018/02/2018-02-14-image-4.jpg"/>
+        <div class="card-title">Lakers</div>
+        <div class="card-subtitle">41 Listings</div>
+      </ion-card>
+    
+    </ion-content>
   </ion-list>
 
   <ion-list *ngSwitchCase="'all'">
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="">
-      </ion-thumbnail>
-      <h2>Noticia</h2>
-    </ion-item>
-    ...
+    <ion-card>
+      <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fpeopledotcom.files.wordpress.com%2F2016%2F08%2Fsteph-curry-1024.jpg%3Fw%3D1024&w=700&c=sc&poi=face&q=85"/>
+      <ion-card-content>
+        <ion-card-title>
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="star"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="share-alt"></ion-icon>
+          </ion-col>
+        </ion-row>
+        
+      </ion-card-content>
+    </ion-card>
   </ion-list>
 </div>
 </ion-content>

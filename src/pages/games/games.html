@@ -19,15 +19,45 @@
 
   <div [ngSwitch]="section">
     <ion-list *ngSwitchCase="'following'">
-      <ion-item>
-        <ion-avatar item-start>
-            <img src="">
-        </ion-avatar>
-          <h2 text-center>11:30 AM</h2>
-        <ion-avatar item-end>
-          <img src="">
-        </ion-avatar>
-      </ion-item>
+
+      <ion-grid>
+        <ion-row class="bg-red color-white">
+            <ion-col>
+                <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+              </ion-col>
+              <ion-col col-8 class="text-center">
+                FECHA
+              </ion-col>
+              <ion-col class="text-right">
+                <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+              </ion-col>
+        </ion-row>
+      </ion-grid>
+        
+        <ion-card>
+          <ion-item>
+            <ion-avatar item-start>
+                <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
+            </ion-avatar>
+              <h2 text-center>FINAL</h2>
+            <ion-avatar item-end>
+              <img src="https://st-listas.20minutos.es/images/2015-02/393166/4640852_640px.jpg?1422980874">
+            </ion-avatar>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+            <ion-item>
+              <ion-avatar item-start>
+                  <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
+              </ion-avatar>
+                <h2 text-center>11:30 AM</h2>
+              <ion-avatar item-end>
+                <img src="https://st-listas.20minutos.es/images/2015-02/393166/4640852_640px.jpg?1422980874">
+              </ion-avatar>
+            </ion-item>
+          </ion-card>
+
     </ion-list>
   
     <ion-list *ngSwitchCase="'all'">
