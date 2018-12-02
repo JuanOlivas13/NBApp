@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { gamesService } from '../../services/games.service';
 
 /**
  * Generated class for the GamesPage page.
@@ -14,10 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'games.html',
 })
 export class GamesPage {
-
+  games:any;
+  objectGame:any;
   section: string = "following";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public gamesService: gamesService) {
+    this.games = gamesService.getGames().valueChanges()
+    .subscribe((gameFB)=>{
+      this.games = gameFB;
+      console.log(this.games);
+    })
   }
 
   ionViewDidLoad() {

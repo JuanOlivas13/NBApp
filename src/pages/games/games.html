@@ -61,7 +61,7 @@
     </ion-list>
   
     <ion-list *ngSwitchCase="'all'">
-      <ion-item>
+      <ion-item *ngFor="let game of games">
         <ion-avatar item-start>
             <img src="">
         </ion-avatar>

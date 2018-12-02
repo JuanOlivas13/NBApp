@@ -14,7 +14,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { GamesPage } from '../pages/games/games';
 import { StatsPage } from '../pages/stats/stats';
 import { SettingsPage } from '../pages/settings/settings';
-import { NewsService } from './services/news.service';
+import { NewsService } from '../services/news.service';
+import { ChooseTeamPage } from '../pages/choose-team/choose-team';
+import { gamesService } from '../services/games.service';
+import { NewPage } from '../pages/new/new';
 
 // Initialize Firebase
 var firebaseConfig = {
@@ -33,7 +36,9 @@ var firebaseConfig = {
     TabsPage,
     GamesPage,
     StatsPage,
-    SettingsPage
+    SettingsPage,
+    ChooseTeamPage,
+    NewPage
   ],
   imports: [
     BrowserModule,
@@ -49,14 +54,17 @@ var firebaseConfig = {
     TabsPage,
     GamesPage,
     StatsPage,
-    SettingsPage
+    SettingsPage,
+    ChooseTeamPage,
+    NewPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NewsService
+    NewsService,
+    gamesService
   ]
 })
 export class AppModule {}

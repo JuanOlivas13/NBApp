@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { NewsService } from '../../app/services/news.service';
+import { NewsService } from '../../services/news.service';
+import { NewPage } from '../new/new';
 
 @Component({
   selector: 'page-home',
@@ -16,5 +17,8 @@ export class HomePage {
       .subscribe((newsFB)=>{
         this.news = newsFB;
       })
+  }
+  goToNew(noticia){
+    this.navCtrl.push(NewPage, {noticia:noticia});
   }
 }

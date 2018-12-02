@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ChooseTeamPage } from '../choose-team/choose-team';
 
 /**
- * Generated class for the SettingsPage page.
+ * Generated class for the NewPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,18 @@ import { ChooseTeamPage } from '../choose-team/choose-team';
 
 @IonicPage()
 @Component({
-  selector: 'page-settings',
-  templateUrl: 'settings.html',
+  selector: 'page-new',
+  templateUrl: 'new.html',
 })
-export class SettingsPage {
-
+export class NewPage {
+  noticia: any = {};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.noticia = navParams.get('noticia');
+    console.log(this.noticia);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
-  }
-  
-  goToChooseTeam(){
-    this.navCtrl.push(ChooseTeamPage);
+    console.log('ionViewDidLoad NewPage');
   }
 
 }

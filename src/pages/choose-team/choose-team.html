@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>ChooseTeam</ion-title>
+    <ion-title>Elegir equipo favorito</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,24 +16,9 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-4>
+      <ion-col col-4 *ngFor="let team of teams">
           <ion-avatar item-start>
-              <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
-          </ion-avatar>
-      </ion-col>
-      <ion-col col-2>
-          <ion-avatar item-start>
-              <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
-          </ion-avatar>
-      </ion-col>
-      <ion-col col-2>
-          <ion-avatar item-start>
-              <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
-          </ion-avatar>
-      </ion-col>
-      <ion-col col-4>
-          <ion-avatar item-start>
-              <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
+              <img src={{team.picture}}/>
           </ion-avatar>
       </ion-col>
     </ion-row>

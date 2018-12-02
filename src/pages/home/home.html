@@ -79,14 +79,14 @@
   </ion-list>
 
   <ion-list *ngSwitchCase="'all'">
-    <ion-card *ngFor="let new of news">
-      <img src={{new.picture}}/>
+    <ion-card *ngFor="let noticia of news" (click)="goToNew(noticia)">
+      <img src={{noticia.picture}}/>
       <ion-card-content>
         <ion-card-title>
-          {{new.title}}
+          {{noticia.title}}
           </ion-card-title>
         <p>
-          {{new.body}}
+          {{noticia.body}}
         </p>
         <ion-row>
           <ion-col>
