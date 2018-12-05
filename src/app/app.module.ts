@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Network } from '@ionic-native/network';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
@@ -18,6 +19,9 @@ import { NewsService } from '../services/news.service';
 import { ChooseTeamPage } from '../pages/choose-team/choose-team';
 import { gamesService } from '../services/games.service';
 import { NewPage } from '../pages/new/new';
+import { AuthenticationService } from '../services/auth.service';
+import { UserService } from '../services/user.service';
+import { LoginPage } from '../pages/login/login';
 
 // Initialize Firebase
 var firebaseConfig = {
@@ -38,7 +42,8 @@ var firebaseConfig = {
     StatsPage,
     SettingsPage,
     ChooseTeamPage,
-    NewPage
+    NewPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,8 @@ var firebaseConfig = {
     StatsPage,
     SettingsPage,
     ChooseTeamPage,
-    NewPage
+    NewPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
@@ -64,7 +70,10 @@ var firebaseConfig = {
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NewsService,
-    gamesService
+    gamesService,
+    Network,
+    AuthenticationService,
+    UserService
   ]
 })
 export class AppModule {}
