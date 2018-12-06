@@ -17,35 +17,11 @@
   <ion-card>
 
     <ion-item>
-      <h2>{{noticia.title}}</h2>
-      <p>November 5, 1955</p>
+      <h2>{{noticia.description}}</h2>
+      <p>{{noticia.date | date : 'fullDate'}}</p>
     </ion-item>
   
     <img src={{noticia.picture}}>
-  
-    <ion-card-content>
-      <p>{{noticia.body}}</p>
-    </ion-card-content>
-  
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-start clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-start clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
-      </ion-col>
-    </ion-row>
   
   </ion-card>
 </ion-content>

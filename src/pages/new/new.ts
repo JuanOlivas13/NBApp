@@ -17,7 +17,6 @@ export class NewPage {
   noticia: any = {};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.noticia = navParams.get('noticia');
-    console.log(this.noticia);
   }
 
   ionViewDidLoad() {

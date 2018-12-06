@@ -17,55 +17,30 @@
     <!-- <ion-header-bar class="bar-stable">
         <h1 class="title">Service Provider Details</h1>
     </ion-header-bar> -->
-    <ion-content>
-        <div class="row header style-head">
-            <div class="col">Ranking</div>
-          <div class="col">Team</div>
-          <div class="col">V</div>
-          <div class="col">D</div>
-          <div class="col">%VIC..</div>
-          <div class="col">DIF</div>
-        </div>
-        <div class="row text-center border-b" ng-repeat="">
-            <div class="col mt-20">1</div>
-          <div class="col">
-            <ion-avatar item-start>
-              <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
-            </ion-avatar>
-            name
-          </div>
-          <div class="col mt-20">12</div>
-          <div class="col mt-20">1</div>
-          <div class="col mt-20">0.923</div>
-          <div class="col mt-20">0</div>
-        </div>
-
-        <div class="row text-center border-b" ng-repeat="">
-            <div class="col mt-20">2</div>
-            <div class="col">
+    <ion-grid class="">
+      <ion-row class="row header style-head">
+        <ion-col class="col"></ion-col>
+        <ion-col class="col">Equipo</ion-col>
+        <ion-col class="col">J</ion-col>
+        <ion-col class="col">G</ion-col>
+        <ion-col class="col">P</ion-col>
+        <ion-col class="col">Pct</ion-col>
+      </ion-row>
+      <ion-row class="row text-center border-b" *ngFor="let team of teams; let i = index" >
+          <ion-col class="col mt-20">{{i+1}}</ion-col>
+          <ion-col class="col mt-20">
+            
               <ion-avatar item-start>
-                <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
+                <img src={{team.picture}}>
               </ion-avatar>
-              name
-            </div>
-            <div class="col mt-20">12</div>
-            <div class="col mt-20">1</div>
-            <div class="col mt-20">0.923</div>
-            <div class="col mt-20">0</div>
-          </div>
-
-          <div class="row text-center border-b" ng-repeat="">
-              <div class="col mt-20">3</div>
-              <div class="col">
-                <ion-avatar item-start>
-                  <img src="https://cdn.shopify.com/s/files/1/2501/2742/products/lalakersphonepopper_300x300.png?v=1519237963">
-                </ion-avatar>
-                name
-              </div>
-              <div class="col mt-20">12</div>
-              <div class="col mt-20">1</div>
-              <div class="col mt-20">0.923</div>
-              <div class="col mt-20">0</div>
-          </div>
-    </ion-content>
+              {{team.name}}
+          
+          </ion-col>
+          <ion-col class="col mt-20">{{team.gamesPlayed}}</ion-col>
+          <ion-col class="col mt-20">{{team.gamesWon}}</ion-col>
+          <ion-col class="col mt-20">{{lose(team.gamesPlayed, team.gamesWon)}}</ion-col>
+          <ion-col class="col mt-20">{{avg(team.gamesPlayed, team.gamesWon)}}</ion-col>
+      </ion-row>
+    </ion-grid>
+        
 </ion-content>
